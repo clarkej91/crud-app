@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="/<%=albums.id%>?_method=PUT" method="POST">
+      name: <input type="text" name="name" value="<%=albums.name%>">
+      title: <input type="text" name="title" value="<%=albums.title%>">
+      description: <input type="text" name="description" value="<%=albums.description%>">
+      image: <input type="text" name="img" value="<%=albums.img%>">
+      link: <input type="text" name="link" value="<%=albums.link%>">
+      <input type="submit" value="submit changes" />
+    </form>
+  </body>
+</html>
