@@ -4,25 +4,57 @@
     <meta charset="utf-8">
     <title></title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Index page</h1>
     <a href="/new">Add a new record</a>
+    <div class="container">
+      <img src="amp.jpeg" alt="amp" class="amp" >
+      <div class="centered">
+        <h4>Recording | Mixing | Mastering</h4><br/>
+        <h1>Jake Clarke</h1></br>
+        <button class="button">
+        <a href="#about-section">About Jake</a>
+        </button>|
+        <button class="button">
+        <a href="#featured-work">Featured Work</a>
+        </button>
+      </div>
+    </div>
+      <div class="about-jake" id="about-section">
+        <h3>About Jake</h3>
+      </div>
+        <div class="about">
+        <p class="font-weight-lighter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, earum, at, consectetur perspiciatis velit similique, ex amet obcaecati dolore ipsum debitis. Eos, aspernatur. Laborum commodi qui explicabo ducimus enim cumque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus natus, sed quos ipsa, doloremque a doloribus illum, cum numquam impedit fugit facilis itaque temporibus consectetur culpa ab necessitatibus alias.<br/>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ipsum voluptatum eveniet consequatur! Consequatur, ipsum ex deserunt. Tempora harum dolore quis minima, sed ducimus totam nisi vitae, ex quo nobis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore ipsa aut modi facere. Eaque eveniet laboriosam dolorem molestiae nisi, quidem nulla, quas mollitia, sunt provident esse? Consequatur fugiat, corrupti iure.</p>
+      </div>
+      <hr>
+    <div class="mx-auto" style="width: 200px;" id="featured-work">
+      <h3>Featured Work</h3>
+    </div>
     <ul class="nav justify-content-center">
       <% for(let i = 0; i < albums.length; i++){%>
         <li>
-          <div class="mx-auto" style="width: 450px;" class="col px-md-5">
-          <a href="/<%=albums[i].id%>">
+          <div class="mx-auto" style="width: 450px;" class="col px-md-5" id="content">
+          <a href="/<%=albums[i].id%>" class="list-group-item-action">
             <img src="<%=albums[i].img%>" class="img-fluid" class="rounded">
         </a>
         </div>
         <form action="/<%=albums[i].id%>?_method=DELETE" method="POST">
           <input type="submit" value="DELETE"/>
         </form>
-
-          <a href="/<%=albums[i].id%>/edit">EDIT</a>
+        <form action="/<%=albums[i].id%>/edit">
+          <input type="submit" value="EDIT">
+        </form>
         </li>
       <% } %>
     </ul>
+    <div class="text-center" class="bottom">
+      <h3>Schedule and Rates</h3>
+      <form action="">
+        <input type="text" placeholder="email">
+        <input type="submit">
+      </form>
+    </div>
   </body>
 </html>

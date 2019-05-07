@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override')
 const Album = require('./models/albums.js');
 
-
+app.use( express.static( "public" ));
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 

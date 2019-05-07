@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <h1>show page</h1>
-    <a href="/">Back</a><br/>
+    <form action="/">
+      <input type="submit" value="BACK">
+    </form>
     name: <%=albums.name%><br/>
     title: <%=albums.title%><br/>
     description: <%=albums.description%><br/>
-    <img src="<%=albums.img%>"><br/>
-    link: <a href="<%=albums.link%>">Link to album</a>
+    <img src="<%=albums.img%>" class="show-img">
+    <br/>
+    <form action="<%=albums.link%>">
+      <input type="submit" value="link to music">
+    </form>
   </body>
 </html>
