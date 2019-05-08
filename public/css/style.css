@@ -2,7 +2,6 @@
   position: relative;
   text-align: center;
   color: white;
-  /* border: 2px solid black; */
   top: 0;
   left: 0;
   min-width: 100%;
@@ -53,6 +52,7 @@ a {
     transition-duration: 0.4s;
     background-color: transparent;
     text-decoration: none;
+    border-radius: 10px;
 }
 a:hover {
      color:black;
@@ -70,4 +70,13 @@ a:hover {
 }
 html {
   scroll-behavior: smooth;
+}
+.footer {
+  height: 200px;
+  width: 100%;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.6);
+}
+.footer-text {
+  color: white;
 }
